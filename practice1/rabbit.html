@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rabbit Model</title>
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            padding-top: 20px;
+        }
+
+        .viewer-box {
+            width: 25%;
+            height: 50vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        model-viewer {
+            width: 100%;
+            height: 100%;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        @media (max-width: 768px) {
+            .viewer-box {
+                width: 50%;
+                height: 60vh;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="viewer-box">
+        <model-viewer 
+            src="rabbit.glb"
+            ios-src="rabbit.usdz"
+            ar
+            ar-modes="webxr scene-viewer quick-look"
+            environment-image="suburban_garden_2k.hdr"
+            skybox-image="suburban_garden_2k.hdr"
+            camera-controls
+            shadow-intensity="1"
+            autoplay>
+        </model-viewer>
+    </div>
+</body>
+</html>
